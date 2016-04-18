@@ -51,18 +51,31 @@ where:
   -t, --tty=false            Allocate a pseudo-TTY (console)
 ```
 
-
-- Host-only NIC
+- Docker images 
 ```
-> ifconfig eth1
+> docker images
 
-eth1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 172.17.8.101  netmask 255.255.255.0  broadcast 172.17.8.255
-        inet6 fe80::a00:27ff:fe2f:9528  prefixlen 64  scopeid 0x20<link>
-        ether 08:00:27:2f:95:28  txqueuelen 1000  (Ethernet)
-        RX packets 17  bytes 1564 (1.5 KiB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 29  bytes 2242 (2.1 KiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+coreos/apache       latest              7aaa39173c60        2 years ago         294.4 MB
+
+```
+
+- Docker stop, kill 
+```
+> docker stop d78248d4e45d
+> docker kill d78248d4e45d
+
+```
+
+- Docker commit: save an image to the local images repository
+```
+> docker commit d78248d4e45d webapp
+
+> docker images 
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+webapp              latest              364d5388adc6        2 days ago          374.8 MB
+coreos/apache       latest              7aaa39173c60        2 years ago         294.4 MB
+
 
 ```
