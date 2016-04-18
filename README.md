@@ -1,19 +1,23 @@
+# Introduction
+This repo is a fork of https://github.com/coreos/coreos-vagrant/. It has been modified for specific training scopes.
+
+ 
 # CoreOS Vagrant
 
-This repo provides a template Vagrantfile to create a CoreOS virtual machine using the VirtualBox software hypervisor.
+It provides a template Vagrantfile to create a CoreOS virtual machine using the VirtualBox software hypervisor.
 After setup is complete you will have a single CoreOS virtual machine running on your local machine.
 
 ## Streamlined setup
 
 1) Install dependencies
 
-* [VirtualBox][virtualbox] 4.3.10 or greater.
-* [Vagrant][vagrant] 1.6 or greater.
+* [VirtualBox][virtualbox] 5.0.1 or greater.
+* [Vagrant][vagrant] 1.8 or greater.
 
 2) Clone this project and get it running!
 
 ```
-git clone https://github.com/coreos/coreos-vagrant/
+git clone https://github.com/amartellone/coreos-vagrant/
 cd coreos-vagrant
 ```
 
@@ -30,28 +34,6 @@ The VirtualBox provider is the default Vagrant provider. Use this if you are uns
 vagrant up
 vagrant ssh
 ```
-
-**VMware Provider**
-
-The VMware provider is a commercial addon from Hashicorp that offers better stability and speed.
-If you use this provider follow these instructions.
-
-VMware Fusion:
-```
-vagrant up --provider vmware_fusion
-vagrant ssh
-```
-
-VMware Workstation:
-```
-vagrant up --provider vmware_workstation
-vagrant ssh
-```
-
-``vagrant up`` triggers vagrant to download the CoreOS image (if necessary) and (re)launch the instance
-
-``vagrant ssh`` connects you to the virtual machine.
-Configuration is stored in the directory so you can always return to this machine by executing vagrant ssh from the directory where the Vagrantfile was located.
 
 4) Get started [using CoreOS][using-coreos]
 
@@ -98,8 +80,6 @@ If you want to start from the most up to date version you will need to make sure
 Simply remove the old box file and vagrant will download the latest one the next time you `vagrant up`.
 
 ```
-vagrant box remove coreos --provider vmware_fusion
-vagrant box remove coreos --provider vmware_workstation
 vagrant box remove coreos --provider virtualbox
 ```
 
