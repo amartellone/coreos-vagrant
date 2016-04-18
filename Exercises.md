@@ -21,6 +21,7 @@
 ```
 where:
 -d, Run container in background and print container ID
+
 -p, Publish a container's port(s) to the host
 80:80, <host port>:<container port> 
 
