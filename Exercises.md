@@ -60,8 +60,9 @@ coreos/apache       latest              7aaa39173c60        2 years ago         
 
 ```
 
-- Docker stop, kill 
+- Docker start, stop, kill 
 ```
+> docker start d78248d4e45d
 > docker stop d78248d4e45d
 > docker kill d78248d4e45d
 
