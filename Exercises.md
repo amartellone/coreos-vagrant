@@ -24,3 +24,13 @@ where:
 -p, Publish a container's port(s) to the host
 80:80, <host port>:<container port> 
 
+# Useful commands
+
+- Running containers
+```
+> docker ps
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    
+d78248d4e45d        coreos/apache       "/usr/sbin/apache2ctl"   3 seconds ago       Up 2 seconds        0.0.0.0:8080->8080/tcp 
+
+```
