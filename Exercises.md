@@ -35,6 +35,23 @@ d78248d4e45d        coreos/apache       "/usr/sbin/apache2ctl"   3 seconds ago  
 
 ```
 
+- Log on to a container 
+
+```
+> docker ps
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    
+d78248d4e45d        coreos/apache       "/usr/sbin/apache2ctl"   3 seconds ago       Up 2 seconds        0.0.0.0:80->80/tcp 
+
+
+> docker exec -it d78248d4e45d bash
+
+where:
+  -i, --interactive=false    Keep STDIN open even if not attached
+  -t, --tty=false            Allocate a pseudo-TTY (console)
+```
+
+
 - Host-only NIC
 ```
 > ifconfig eth1
