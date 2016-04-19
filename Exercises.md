@@ -23,12 +23,14 @@ where:
 
 -d, Run container in background and print container ID
 
--p, Publish a container's port to the host
-80:80, <host port>:<container port> 
+-p, Publish a container's port to the host 
+
+host port:container port
 
 # Useful commands
 
 - Running containers
+- 
 ```
 > docker ps
 
