@@ -27,6 +27,11 @@ where:
 
 host port:container port
 
+# Understand the Docker networking basics
+
+In this lab we analyze the basic model based on Linux Bridge.
+
+
 # Useful commands
 
 - Running containers
