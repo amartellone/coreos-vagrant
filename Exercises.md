@@ -38,11 +38,19 @@ The following picture[1] shows as Docker configures the network layer in its def
 - eth0: host NIC
 - docker0: the default virtual bridge that Docker creates when the Docker deamon starts. Docker picks a subnet not in use on the host and assigns a free IP address to the bridge. Docker0 handles all host-containers communications. When Docker starts a container, by default, it creates a virtual interface on the host with a unique name, such as veth220960a, and an address within the same subnet. This new interface will be connected to the eth0 interface on the container itself. In order to allow connections, iptables rules are added, using a DOCKER-named chain. Network address translation (NAT) is used to forward traffic to external hosts, and the host machine must be set up to forward IP packets. Docker0 is used for connecting all containers on the same host to the local network.  
 
+In order to understand in depth how the network lab is configured, we can use the following commands:
+
+- ifconfig -a
+- brctl show : show a list of bridges, and which are the veths attached to
+- docker network ls: list all networks
+- vim /etc/systemd/network/50-vagrant1.network (the file name could change)
+- sudo iptables --list
+- route
 
 # Useful commands
 
 - Running containers
-- 
+
 ```
 > docker ps
 
