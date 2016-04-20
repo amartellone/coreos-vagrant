@@ -29,8 +29,11 @@ host port:container port
 
 # Understand the Docker networking basics
 
-In this lab we analyze the basic model based on Linux Bridge.
+In this lab we analyze the basic networking model used by Docker based on Linux Bridge.
 
+The following picture[1] shows as Docker configures the network layer in its default configuration.
+
+![Docker bridge network](http://url/to/img.png)
 
 # Useful commands
 
@@ -89,3 +92,6 @@ coreos/apache       latest              7aaa39173c60        2 years ago         
 
 
 ```
+
+# References
+[1] http://www.linuxjournal.com/content/concerning-containers-connections-docker-networking
