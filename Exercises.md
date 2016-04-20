@@ -106,24 +106,43 @@ coreos/apache       latest              7aaa39173c60        2 years ago         
 ```
 # Install a Wordpress container using MariaDb
 
-* Download the latest Wordpress and MariaDb images 
+For this example will be used docker-compose, that is not installed by default.
 
-```
-> docker pull wordpress
-
-> docker pull mariadb
-
-> docker images 
-
-REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-webapp              latest              364d5388adc6        4 days ago          374.8 MB
-wordpress           latest              9ef1ddda1fc4        6 days ago          520.4 MB
-mariadb             latest              ea3c57894844        2 weeks ago         347.1 MB
-coreos/apache       latest              7aaa39173c60        2 years ago         294.4 MB
+* Create the following bash script, and run it.[2] 
 
 
 ```
 
+#!/bin/bash
+mkdir -p /opt/bin
+curl -L `curl -s https://api.github.com/repos/docker/compose/releases/latest | jq -r '.assets[].browser_download_url | select(contains("Linux") and contains("x86_64"))'` > /opt/bin/docker-compose
+chmod +x /opt/bin/docker-compose
+
+
+```
+
+* Create the file docker-compose.yml[3]
+
+```
+
+wordpress:
+  image: wordpress
+  links:
+    - db:mysql
+  ports:
+    - 8080:80
+
+db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: example
+
+
+```
+
+* Open the browser at <ip:8080> and install Wordpress.
 
 # References
 [1] http://www.linuxjournal.com/content/concerning-containers-connections-docker-networking
+[2] https://gist.github.com/marszall87/ee7c5ea6f6da9f8968dd
+[3] https://hub.docker.com/_/wordpress/
