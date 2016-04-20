@@ -104,6 +104,26 @@ coreos/apache       latest              7aaa39173c60        2 years ago         
 
 
 ```
+# Install a Wordpress container using MariaDb
+
+* Download the latest Wordpress and MariaDb images 
+
+```
+> docker pull wordpress
+
+> docker pull mariadb
+
+> docker images 
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+webapp              latest              364d5388adc6        4 days ago          374.8 MB
+wordpress           latest              9ef1ddda1fc4        6 days ago          520.4 MB
+mariadb             latest              ea3c57894844        2 weeks ago         347.1 MB
+coreos/apache       latest              7aaa39173c60        2 years ago         294.4 MB
+
+
+```
+
 
 # References
 [1] http://www.linuxjournal.com/content/concerning-containers-connections-docker-networking
