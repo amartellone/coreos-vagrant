@@ -96,3 +96,9 @@ Follow the [Enable Remote API instructions][coreos-enabling-port-forwarding] to 
 Then you can then use the `docker` command from your local shell by setting `DOCKER_HOST`:
 
     export DOCKER_HOST=tcp://localhost:2375
+
+
+## Lab
+
+If you want to "play" with CoreOS and Docker, please have a look at 
+https://github.com/amartellone/coreos-vagrant/blob/master/Exercises.md
