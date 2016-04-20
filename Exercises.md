@@ -33,7 +33,7 @@ In this lab we analyze the basic networking model used by Docker based on Linux 
 
 The following picture[1] shows as Docker configures the network layer in its default configuration.
 
-![Docker bridge network](http://url/to/img.png)
+![Docker bridge network](https://github.com/amartellone/coreos-vagrant/blob/master/bridge-network-docker.png)
 
 # Useful commands
 
