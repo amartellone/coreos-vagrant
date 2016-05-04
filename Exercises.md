@@ -15,6 +15,9 @@
 # Create the first Docker container: Apache
 
 - Run an Apache container
+
+ We need to run the Apache process in the foreground, since our container will stop when the process specified in the docker run command stops. We can do this with a flag -D when starting the apache2 process:
+
 ```
 > docker run -d -p 80:80 coreos/apache /usr/sbin/apache2ctl -D FOREGROUND
 
