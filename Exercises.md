@@ -146,7 +146,7 @@ db:
 
 ```
 
-* Open the browser at <ip:8080> and install Wordpress.
+* Run docker-compose up, wait for it to initialize completely, visit <ip:8080> and install Wordpress.
 
 # References
 [1] http://www.linuxjournal.com/content/concerning-containers-connections-docker-networking
