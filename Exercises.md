@@ -150,5 +150,7 @@ db:
 
 # References
 [1] http://www.linuxjournal.com/content/concerning-containers-connections-docker-networking
+
 [2] https://gist.github.com/marszall87/ee7c5ea6f6da9f8968dd
+
 [3] https://hub.docker.com/_/wordpress/
