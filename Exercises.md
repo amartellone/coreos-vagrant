@@ -30,6 +30,9 @@ where:
 
 host port:container port
 
+
+Note: The container is running in background but the service inside the container is running in foreground.
+
 # Understand the Docker networking basics
 
 In this lab we analyze the basic networking model used by Docker based on Linux Bridge.
