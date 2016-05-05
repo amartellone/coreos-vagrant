@@ -145,6 +145,9 @@ db:
 
 
 ```
+In order to connect two or more containers the legacy feature (based on bridge) is using linking system that allows you to link multiple containers together and send connection information from one to another.
+When containers are linked, information about a source container can be sent to a recipient container. The naming convention is <name or id>:alias. The name or the id must be unique[4].
+
 
 * Run docker-compose up, visit <ip:8080> and install Wordpress.
 
@@ -154,3 +157,7 @@ db:
 [2] https://gist.github.com/marszall87/ee7c5ea6f6da9f8968dd
 
 [3] https://hub.docker.com/_/wordpress/
+
+[4] https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/
+
+
